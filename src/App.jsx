@@ -80,17 +80,20 @@ export default function App() {
 
   const generateAmount = () => {
     const random = Math.random();
-
-    if (random < 0.85) {
+  
+    if (random < 0.5) {
+      return `₹1`;
+    } else if (random < 0.7) {
+      return "🙁 Try Again 🙁";
+    } else if (random < 0.9) {
       return `₹${Math.floor(Math.random() * 20) + 1}`;
     } else if (random < 0.95) {
-      return `₹${Math.floor(Math.random() * 30) + 21}`;
-    } else if (random < 0.99) {
-      return `₹${Math.floor(Math.random() * 50) + 51}`;
+      return `₹${Math.floor(Math.random() * 50) + 1}`;
     } else {
-      return "🙁 Try Again 🙁";
+      return `₹${Math.floor(Math.random() * 100) + 1}`;
     }
   };
+  
 
   const sendWhatsApp = () => {
     const text = amount.includes("Try Again")
