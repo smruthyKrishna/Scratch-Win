@@ -1,0 +1,75 @@
+/* Container for the app */
+.app-container {
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+  color: #000;
+}
+
+/* Container for the canvas */
+.canvas-container {
+  position: relative;
+  width: 300px;
+  height: 200px;
+  margin-bottom: 30px;
+  background-color: #fff;
+  border: 2px solid #555;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Amount display on top of the canvas */
+.amount-display {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  font-size: 28px;
+  font-weight: bold;
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  user-select: none;
+  visibility: hidden; /* Hide initially */
+}
+
+.amount-display.show {
+  visibility: visible; /* Show when the amount is revealed */
+}
+
+.scratch-canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  border-radius: 10px;
+}
+
+/* WhatsApp button styling */
+.whatsapp-button {
+  padding: 10px 25px;
+  font-size: 18px;
+  background-color: #25D366;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button.disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
